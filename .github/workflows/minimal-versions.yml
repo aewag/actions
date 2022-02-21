@@ -28,4 +28,6 @@ jobs:
         run: cargo build --benches
       - run: rm ../Cargo.toml
       - run: cargo update -Z minimal-versions
+      - run: rustup show
+      - run: rustc --version
       - run: cargo hack test --release --feature-powerset
